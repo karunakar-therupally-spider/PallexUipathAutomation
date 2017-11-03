@@ -13,6 +13,8 @@
   <x:Members>
     <x:Property Name="un" Type="InArgument(x:String)" />
     <x:Property Name="pwd" Type="InArgument(x:Object)" />
+    <x:Property Name="uib1" Type="InArgument(ui:Browser)" />
+    <x:Property Name="uib2" Type="OutArgument(ui:Browser)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -94,7 +96,7 @@
       <Variable x:TypeArguments="s:String[]" Name="UsernameArray" />
       <Variable x:TypeArguments="x:String" Name="actualUsername" />
     </Sequence.Variables>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="LoginBroserScreen" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="cfb00a85891d0212957af105fc84c871" Selector="&lt;html app='chrome.exe' title='Nexus' /&gt;">
+    <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Browser="[uib1]" BrowserType="IE" DisplayName="LoginBroserScreen" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="cfb00a85891d0212957af105fc84c871" UiBrowser="[uib2]">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -158,7 +160,7 @@
         </ActivityAction>
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
-    <sads:DebugSymbol.Symbol>dzVEOlxQYWxsZXhVaXBhdGhBdXRvbWF0aW9uLXdvcmtcQ29tbW9uXExvZ2luTmV4dXMueGFtbB1cA6IBDgIBAWEFoAEXAgECYZICYcECAgEnZwudARYCAQNoDWikAQIBJGkNbRsCASBuDXIbAgEccw2BARgCARqCAQ2CAVQCARiDAQ2KARsCARSLAQ2SARYCAQ+TAQ2aARYCAQubAQ2bAZgBAgEInAENnAG8AQIBBGhkaKEBAgEla6ABa80BAgEjaakCaa8CAgEhcKABcM0BAgEfbqkCbrkCAgEdf6ABf/IBAgEbggEdggEnAgEZiAE5iAFJAgEVhQGgAYUB3gECAReQATqQAVICARKNATuNAUoCARCYATiYAU0CAQ6VATmVAUkCAQybAWSbAZUBAgEJnAFXnAGLAQIBBQ==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>dzVEOlxQYWxsZXhVaXBhdGhBdXRvbWF0aW9uLXdvcmtcQ29tbW9uXExvZ2luTmV4dXMueGFtbB5eA6QBDgIBAWMFogEXAgECY4wCY5QCAgEpY15jZgIBJ2kLnwEWAgEDag1qpAECASRrDW8bAgEgcA10GwIBHHUNgwEYAgEahAENhAFUAgEYhQENjAEbAgEUjQENlAEWAgEPlQENnAEWAgELnQENnQGYAQIBCJ4BDZ4BvAECAQRqZGqhAQIBJW2gAW3NAQIBI2upAmuvAgIBIXKgAXLNAQIBH3CpAnC5AgIBHYEBoAGBAfIBAgEbhAEdhAEnAgEZigE5igFJAgEVhwGgAYcB3gECAReSATqSAVICARKPATuPAUoCARCaATiaAU0CAQ6XATmXAUkCAQydAWSdAZUBAgEJngFXngGLAQIBBQ==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -187,7 +189,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="LoginNexus_1" sap:VirtualizedContainerService.HintSize="476,1745" />
+      <sap2010:ViewStateData Id="LoginNexus_1" sap:VirtualizedContainerService.HintSize="476,1985" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
