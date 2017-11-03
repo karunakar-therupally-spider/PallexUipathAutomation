@@ -14,6 +14,7 @@
     <x:Property Name="consignmentCreated" Type="OutArgument(x:String)" />
     <x:Property Name="customerPrice" Type="OutArgument(x:String)" />
     <x:Property Name="result" Type="OutArgument(x:String)" />
+    <x:Property Name="uib3" Type="InArgument(ui:Browser)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -121,7 +122,7 @@
                 <InArgument x:TypeArguments="ui:GenericValue">[consignmentRow(0).ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <WriteLine DisplayName="Write line" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Type of consignment: &quot;+ rowItems]" />
+            <WriteLine DisplayName="Write line" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;Type of consignment: &quot;+ rowItems + &quot;  and browser is:  &quot; + uib3.BrowserName.ToString]" />
             <If sap2010:Annotation.AnnotationText="Check Type of Consignment" Condition="[rowItems.Equals(&quot;Connect&quot;)]" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence sap2010:WorkflowViewState.IdRef="Sequence_16">
@@ -132,6 +133,7 @@
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="sd:DataRow" x:Key="row">[consignmentRow]</InArgument>
                       <OutArgument x:TypeArguments="x:String" x:Key="result">[consignmentResult]</OutArgument>
+                      <InArgument x:TypeArguments="ui:Browser" x:Key="uib2">[uib3]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </Sequence>
@@ -141,11 +143,11 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <sads:DebugSymbol.Symbol>d0VEOlxQYWxsZXhVaXBhdGhBdXRvbWF0aW9uLXdvcmtcVGVzdFNjcmlwdHNcQWRkQ29uc2lnbm1lbnRVc2luZ0R0LnhhbWwTXwORAQ4CAQFlBWkdAgEVagWPARUCAQJnQGdPAgEXZcUBZfABAgEWah5qLwIBE3ALjAEWAgEDdA17FgIBD3wNfJYBAgENfQ2LARICAQR5P3lbAgESdkB2SgIBEHxkfJMBAgEOfVl9gQECAQV/EYkBHAIBBoMBE4gBKwIBB4UBTIUBXAIBC4YBToYBYQIBCYMB0AGDAfgBAgEI</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d0VEOlxQYWxsZXhVaXBhdGhBdXRvbWF0aW9uLXdvcmtcVGVzdFNjcmlwdHNcQWRkQ29uc2lnbm1lbnRVc2luZ0R0LnhhbWwUYAOTAQ4CAQFmBWodAgEXawWRARUCAQJoQGhPAgEZZsUBZvABAgEYax5rLwIBFXELjgEWAgEDdQ18FgIBEX0NfdQBAgEPfg2NARICAQR6P3pbAgEUd0B3SgIBEn1kfdEBAgEQfll+gQECAQWAARGLARwCAQaEAROKASsCAQeGAUyGAVwCAQ2HAU6HAWECAQuIAU2IAVMCAQmEAdABhAH4AQIBCA==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
-      <sap2010:ViewStateData Id="InvokeWorkflowFile_1" sap:VirtualizedContainerService.HintSize="516,87" />
+      <sap2010:ViewStateData Id="InvokeWorkflowFile_1" sap:VirtualizedContainerService.HintSize="615,87" />
       <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="464,60" />
       <sap2010:ViewStateData Id="WriteLine_2" sap:VirtualizedContainerService.HintSize="464,61" />
       <sap2010:ViewStateData Id="InvokeWorkflowFile_3" sap:VirtualizedContainerService.HintSize="314,87" />
@@ -172,15 +174,15 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="ForEachRow_1" sap:VirtualizedContainerService.HintSize="516,859" />
-      <sap2010:ViewStateData Id="Sequence_13" sap:VirtualizedContainerService.HintSize="538,1110">
+      <sap2010:ViewStateData Id="ForEachRow_1" sap:VirtualizedContainerService.HintSize="615,859" />
+      <sap2010:ViewStateData Id="Sequence_13" sap:VirtualizedContainerService.HintSize="637,1110">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="addConsignmentFrance_1" sap:VirtualizedContainerService.HintSize="578,1230" />
+      <sap2010:ViewStateData Id="addConsignmentFrance_1" sap:VirtualizedContainerService.HintSize="677,1990" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

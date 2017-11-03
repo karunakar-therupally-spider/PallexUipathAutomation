@@ -13,6 +13,7 @@
   <x:Members>
     <x:Property Name="row" Type="InArgument(sd:DataRow)" />
     <x:Property Name="result" Type="OutArgument(x:String)" />
+    <x:Property Name="uib2" Type="InArgument(ui:Browser)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -90,7 +91,7 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="AddConsignmentBrowserScreen" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="772c1c63c7705477bddd904e1c94f250" Selector="&lt;html app='chrome.exe' title='Nexus' /&gt;">
+  <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[uib2]" BrowserType="IE" DisplayName="AddConsignmentBrowserScreen" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="772c1c63c7705477bddd904e1c94f250">
     <ui:BrowserScope.Body>
       <ActivityAction x:TypeArguments="x:Object">
         <ActivityAction.Argument>
@@ -299,7 +300,7 @@
         </Sequence>
       </ActivityAction>
     </ui:BrowserScope.Body>
-    <sads:DebugSymbol.Symbol>d0VEOlxQYWxsZXhVaXBhdGhBdXRvbWF0aW9uLXdvcmtcVGVzdFNjcmlwdHNcQWRkQ29uc2lnbm1lbnRDb25uZWN0LnhhbWxQXQOvAhUCAQFdmgJdyQICAVVjCasCFAIBAmgLaFICAVNpC3cWAgFReAt4WgIBT3kLfRkCAUx+C35TAgFKfwuDARsCAUmEAQuIARsCAUiJAQuJAVsCAUaKAQuOARkCAUOPAQuPAVoCAUGQAQuUARsCAUCVAQuZARsCAT+aAQueARkCATyfAQufAVoCATqgAQukARsCATmlAQulAVICATemAQuqARsCATarAQuvARkCATOwAQu0ARkCATC1AQvDARYCAS7EAQvIARkCASvJAQvNARkCASjOAQvSARkCASXTAQvXARkCASLYAQvcARkCAR/dAQvrARYCAR3sAQvsAVICARvtAQv0ARkCARf1AQuDAhYCARWEAguLAhkCARGMAguMAs8BAgEPjQILogIQAgEEowILqgIbAgEDaBtoJQIBVHWeAXXFAQIBUngbeC0CAVB7ngF72wECAU554gJ59QICAU1+G34lAgFLiQEbiQEtAgFHjAGeAYwB4QECAUWKAd0CigHwAgIBRI8BG48BLQIBQpwBngGcAeEBAgE+mgHgApoB8wICAT2fARufAS0CATulARulASUCATitAZ4BrQHVAQIBNasB4gKrAfUCAgE0sgGeAbIB0gECATKwAdkCsAHsAgIBMcEBngHBAc0BAgEvxgGeAcYBzAECAS3EAcgCxAHbAgIBLMsBngHLAcsBAgEqyQHHAskB2gICASnQAZ4B0AHMAQIBJ84ByQLOAdwCAgEm1QGeAdUBzAECASTTAckC0wHcAgIBI9oBngHaAdwBAgEh2AHhAtgB9QICASDpAZ4B6QHdAQIBHuwBG+wBJQIBHPIBN/IBRgIBGO8BngHvAcsBAgEagQKeAYEC1QECARaJAjeJAksCARKGAp4BhgL0AQIBFIwCYowCzAECARCNAhmNAlcCAQWPAg+WAhgCAQuZAg+gAhgCAQeUAjqUAj4CAQ6RAjuRAkMCAQyeAjqeAj4CAQqbAjubAkMCAQg=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d0VEOlxQYWxsZXhVaXBhdGhBdXRvbWF0aW9uLXdvcmtcVGVzdFNjcmlwdHNcQWRkQ29uc2lnbm1lbnRDb25uZWN0LnhhbWxQXgOwAhUCAQFecV55AgFVZAmsAhQCAQJpC2lSAgFTagt4FgIBUXkLeVoCAU96C34ZAgFMfwt/UwIBSoABC4QBGwIBSYUBC4kBGwIBSIoBC4oBWwIBRosBC48BGQIBQ5ABC5ABWgIBQZEBC5UBGwIBQJYBC5oBGwIBP5sBC58BGQIBPKABC6ABWgIBOqEBC6UBGwIBOaYBC6YBUgIBN6cBC6sBGwIBNqwBC7ABGQIBM7EBC7UBGQIBMLYBC8QBFgIBLsUBC8kBGQIBK8oBC84BGQIBKM8BC9MBGQIBJdQBC9gBGQIBItkBC90BGQIBH94BC+wBFgIBHe0BC+0BUgIBG+4BC/UBGQIBF/YBC4QCFgIBFYUCC4wCGQIBEY0CC40CzwECAQ+OAgujAhACAQSkAgurAhsCAQNpG2klAgFUdp4BdsUBAgFSeRt5LQIBUHyeAXzbAQIBTnriAnr1AgIBTX8bfyUCAUuKARuKAS0CAUeNAZ4BjQHhAQIBRYsB3QKLAfACAgFEkAEbkAEtAgFCnQGeAZ0B4QECAT6bAeACmwHzAgIBPaABG6ABLQIBO6YBG6YBJQIBOK4BngGuAdUBAgE1rAHiAqwB9QICATSzAZ4BswHSAQIBMrEB2QKxAewCAgExwgGeAcIBzQECAS/HAZ4BxwHMAQIBLcUByALFAdsCAgEszAGeAcwBywECASrKAccCygHaAgIBKdEBngHRAcwBAgEnzwHJAs8B3AICASbWAZ4B1gHMAQIBJNQByQLUAdwCAgEj2wGeAdsB3AECASHZAeEC2QH1AgIBIOoBngHqAd0BAgEe7QEb7QElAgEc8wE38wFGAgEY8AGeAfABywECARqCAp4BggLVAQIBFooCN4oCSwIBEocCngGHAvQBAgEUjQJijQLMAQIBEI4CGY4CVwIBBZACD5cCGAIBC5oCD6ECGAIBB5UCOpUCPgIBDpICO5ICQwIBDJ8COp8CPgIBCpwCO5wCQwIBCA==</sads:DebugSymbol.Symbol>
   </ui:BrowserScope>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -392,7 +393,7 @@
       </sap2010:ViewStateData>
       <sap2010:ViewStateData Id="Click_4" sap:VirtualizedContainerService.HintSize="509,106" />
       <sap2010:ViewStateData Id="Delay_9" sap:VirtualizedContainerService.HintSize="509,22" />
-      <sap2010:ViewStateData Id="GetValue_2" sap:VirtualizedContainerService.HintSize="509,106" />
+      <sap2010:ViewStateData Id="GetValue_2" sap:VirtualizedContainerService.HintSize="314,106" />
       <sap2010:ViewStateData Id="Click_5" sap:VirtualizedContainerService.HintSize="509,106" />
       <sap2010:ViewStateData Id="GetValue_3" sap:VirtualizedContainerService.HintSize="509,106" />
       <sap2010:ViewStateData Id="WriteLine_1" sap:VirtualizedContainerService.HintSize="509,61" />
@@ -416,8 +417,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="BrowserScope_1" sap:VirtualizedContainerService.HintSize="545,5269" />
-      <sap2010:ViewStateData Id="AddConsignmentConnect_1" sap:VirtualizedContainerService.HintSize="585,5349" />
+      <sap2010:ViewStateData Id="BrowserScope_1" sap:VirtualizedContainerService.HintSize="545,5549" />
+      <sap2010:ViewStateData Id="AddConsignmentConnect_1" sap:VirtualizedContainerService.HintSize="585,5909" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
